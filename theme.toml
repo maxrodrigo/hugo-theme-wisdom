@@ -1,0 +1,14 @@
+name = "Wisdom"
+license = "MIT"
+licenselink = "https://github.com/maxrodrigo/wisdom/blob/master/LICENSE"
+description = "A simple yet powerful monospaced theme for Hugo."
+homepage = "https://github.com/maxrodrigo/hugo-theme-wisdom/"
+demosite = "https://maxrodrigo.com/"
+tags = ["blog", "gallery", "portfolio", "console", "terminal", "clean", "personal", "minimal", "monotone", "simple", "technical", "responsive", "mobile", "minimalist", "retro", "animation"]
+features = ["disqus", "responsive", "google analytics"]
+min_version = "0.01"
+
+[author]
+  name = "Max Rodrigo"
+  homepage = "https://maxrodrigo.com"
+  github = "https://github.com/maxrodrigo"
