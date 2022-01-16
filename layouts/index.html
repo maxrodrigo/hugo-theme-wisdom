@@ -1,10 +1,15 @@
 {{ define "main" }}
-	<main>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range $paginator.Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
-	</main>
-{{ partial "sidebar.html" . }}
+<main>
+    {{ with .Content }} {{ . | emojify }} {{ end }}
+    <h2>Latests Posts</h2>
+    <ul>
+    {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections}}
+    {{ range first .Site.Params.homePaginate $posts }}
+        {{ partial "li_simple.html" . }}
+    {{ end }}
+    {{ if gt (len $posts) .Site.Params.homePaginate }}
+    <a href="/posts/">more…</a>
+    {{ end }}
+    </ul>
+</main>
 {{ end }}
