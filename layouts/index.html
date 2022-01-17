@@ -1,14 +1,14 @@
 {{ define "main" }}
 <main>
     {{ with .Content }} {{ . | emojify }} {{ end }}
-    <h2>Latests Posts</h2>
+    <h2>{{ i18n "latest_posts" }}</h2>
     <ul>
     {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections}}
     {{ range first .Site.Params.homePaginate $posts }}
         {{ partial "li_simple.html" . }}
     {{ end }}
     {{ if gt (len $posts) .Site.Params.homePaginate }}
-    <a href="/posts/">more…</a>
+    <a href="/posts/">{{ i18n "more" }}</a>
     {{ end }}
     </ul>
 </main>

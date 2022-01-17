@@ -1,0 +1,23 @@
+[prev_page]
+other = "Página anterior"
+
+[next_page]
+other = "Página siguiente"
+
+[latest_posts]
+other = "Últimos Posts"
+
+[more]
+other = "Más…"
+
+[read_more]
+other = "Leer más…"
+
+[page_not_found]
+other = "Página no encontrada"
+
+[page_does_not_exist]
+other = "Disculpa, la página no existe."
+
+[head_back]
+other = "Puedes regresar a la <a href=\"{{ . }}\">página inicial</a>."

@@ -7,7 +7,7 @@
     <div>
         {{ .Summary }}
         {{ if .Truncated }}
-        <a href="{{ .Permalink }}">Read more…</a>
+        <a href="{{ .Permalink }}">{{ i18n "read_more" }}</a>
         {{ end }}
     </div>
 </article>
