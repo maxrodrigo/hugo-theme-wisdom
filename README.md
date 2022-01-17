@@ -42,12 +42,18 @@ For more information read the official [quick start guide](https://gohugo.io/get
 ```toml
 baseURL = "https://www.maxrodrigo.com/"
 title = "Max Rodrigo"
-theme = "hugo-theme-wisdom"
-languageCode = "en-us"
 
+theme = "hugo-theme-wisdom"
+
+languageCode = "en-us"
+enableRobotsTXT = true
+
+# Default Params
 [Params]
-  author = "Max"
-  homePaginate = 10
+  author =
+  latestPostsLimit = 5
+  hideReadingTime = false
+  hideAuthor = false
 
 [menu]
 [[menu.main]]

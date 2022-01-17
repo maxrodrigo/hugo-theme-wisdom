@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
 <article>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+    {{ partial "post_meta" . }}
     <h1>{{ .Title }}</h1>
     <div>
         {{ .Content | emojify }}

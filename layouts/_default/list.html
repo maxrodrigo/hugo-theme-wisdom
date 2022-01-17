@@ -8,14 +8,7 @@
     {{ range .Paginator.Pages }}
     <article>
     <h1><a href="{{ .Permalink }}">{{ .Title }}</a> </h1>
-    <div class="post-meta">
-        <ul>
-            <li><time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "2 Jan 2006" }}</time></li>
-            <li>{{ i18n "read_time" .ReadingTime }}</li>
-            {{- if .Site.Params.author }}<li>{{ .Site.Params.author }}</li>{{- end }}
-            {{- if .Draft }}<li>[draft]</li>{{- end }}
-        </ul>
-    </div>
+    {{ partial "post_meta.html" . }}
     </article>
     {{ end }}
     {{ partial "pagination.html" . }}
