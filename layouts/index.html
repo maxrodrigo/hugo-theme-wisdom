@@ -6,10 +6,7 @@
     <ul>
     {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections}}
     {{ range first $postsLimit $posts }}
-    <li>
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "2006.01.02" }}</time>
-        <a href="{{ .Permalink }}">{{.Title }}</a>
-    </li>
+    {{ partial "li.html" . }}
     {{ end }}
     {{ if gt (len $posts) $postsLimit }}
     <a href="/posts/">{{ i18n "more" }}</a>

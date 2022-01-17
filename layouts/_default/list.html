@@ -7,10 +7,7 @@
 
     <ul>
     {{ range .Paginator.Pages }}
-    <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ partial "post_meta.html" . }}
-    </li>
+    {{ partial "li.html" . }}
     {{ end }}
     </ul>
     {{ partial "pagination.html" . }}
