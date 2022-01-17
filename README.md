@@ -6,6 +6,7 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 
 - SEO Friendly
 - Multilingual Mode
+- Environment based `robots.txt`
 
 ## Install as a git submodule
 
