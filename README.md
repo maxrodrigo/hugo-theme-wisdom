@@ -4,9 +4,10 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 
 ### Features
 
+- Auto Dark Mode
 - SEO Friendly
 - Multilingual Mode
-- Environment based `robots.txt`
+- Disqus
 
 ## Install as a git submodule
 
@@ -41,15 +42,12 @@ For more information read the official [quick start guide](https://gohugo.io/get
 ```toml
 baseURL = "https://www.maxrodrigo.com/"
 title = "Max Rodrigo"
-
 theme = "hugo-theme-wisdom"
-
 languageCode = "en-us"
-paginate = 10
 
 [Params]
+  author = "Max"
   homePaginate = 10
-  relatedPaginate = 5
 
 [menu]
 [[menu.main]]

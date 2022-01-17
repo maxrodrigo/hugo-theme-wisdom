@@ -10,8 +10,9 @@ other = "Latest Posts"
 [more]
 other = "More…"
 
-[read_more]
-other = "Read More…"
+[read_time]
+one = "1 min"
+other = "{{ .Count }} min"
 
 [page_not_found]
 other = "Page Not Found"

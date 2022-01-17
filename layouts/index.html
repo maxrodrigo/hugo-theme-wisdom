@@ -5,7 +5,10 @@
     <ul>
     {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections}}
     {{ range first .Site.Params.homePaginate $posts }}
-        {{ partial "li_simple.html" . }}
+    <li>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "2006.01.02" }}</time>
+        <a href="{{ .Permalink }}">{{.Title }}</a>
+    </li>
     {{ end }}
     {{ if gt (len $posts) .Site.Params.homePaginate }}
     <a href="/posts/">{{ i18n "more" }}</a>

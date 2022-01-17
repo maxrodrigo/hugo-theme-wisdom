@@ -1,22 +1,23 @@
 html {
   overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
 }
 :root {
-  --bgcolor: white;
-  --fontcolor: #444;
-  --linkcolor: #00e;
-  --visitedcolor: #551a8b;
-  --precolor: #fff;
-  --prebgcolor: #000;
+  --bg-color: white;
+  --font-color: #444;
+  --link-color: #00e;
+  --visited-color: #551a8b;
+  --pre-color: #fff;
+  --pre-bg-color: #000;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bgcolor: black;
-    --fontcolor: white;
-    --linkcolor: #5bf;
-    --visitedcolor: #ae5ee0;
-    --precolor: #fff;
-    --prebgcolor: #383838;
+    --bg-color: black;
+    --font-color: white;
+    --link-color: #5bf;
+    --visited-color: #ae5ee0;
+    --pre-color: #fff;
+    --pre-bg-color: #383838;
   }
 }
 body {
@@ -24,17 +25,21 @@ body {
   margin: 40px auto;
   padding: 0 10px;
   font: 14px/1.5 monospace;
-  color: var(--fontcolor);
-  background: var(--bgcolor);
+  color: var(--font-color);
+  background: var(--bg-color);
 }
 a:link {
-  color: var(--linkcolor);
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 a:visited {
-  color: var(--visitedcolor);
+  color: var(--visited-color);
 }
 a:active {
-  color: var(--visitedcolor);
+  color: var(--visited-color);
 }
 h1,
 h2,
@@ -42,18 +47,22 @@ h3 {
   line-height: 1.2;
 }
 p > code {
-  color: var(--precolor);
-  background: var(--prebgcolor);
+  color: var(--pre-color);
+  background: var(--pre-bg-color);
   padding: 2px;
 }
 pre {
-  color: var(--precolor);
-  background: var(--prebgcolor);
+  color: var(--pre-color);
+  background: var(--pre-bg-color);
   padding: 24px;
   overflow-x: auto;
 }
 article {
   padding: 24px 0;
+
+  h1{
+    margin: 0;
+  }
 }
 .center {
   display: block;
@@ -76,13 +85,36 @@ img {
   margin: auto;
 }
 
+article {
+  padding: 12px 0;
+}
+
 header[role="main"] nav {
   ol,ul {
     list-style: none;
     padding: 0;
     margin: 0;
+
+    li {
+      display: inline-block;
+    }
   }
+}
+
+.post-meta ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   li {
     display: inline-block;
+
+    &:not(:last-child)::after {
+      content: " \00b7";
+    }
   }
+}
+
+footer {
+  padding-top: 24px;
 }
