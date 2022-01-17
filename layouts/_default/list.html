@@ -5,12 +5,14 @@
         {{ with .Content }}<div>{{ . }}</div>{{ end }}
     {{ end }}
 
+    <ul>
     {{ range .Paginator.Pages }}
-    <article>
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a> </h1>
-    {{ partial "post_meta.html" . }}
-    </article>
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ partial "post_meta.html" . }}
+    </li>
     {{ end }}
+    </ul>
     {{ partial "pagination.html" . }}
 </main>
 {{ end }}
