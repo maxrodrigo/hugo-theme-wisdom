@@ -1,3 +1,12 @@
 <footer>
-  <p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+  {{- if .Site.Copyright }}
+  <span>{{ .Site.Copyright | markdownify }}</span>
+  {{- else }}
+  <span>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span>
+  {{- end }}
+  <span>
+      Powered by
+      <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+      <a href="https://github.com/maxrodrigo/hugo-theme-wisdom/" rel="noopener" target="_blank">Wisdom</a>
+  </span>
 </footer>
