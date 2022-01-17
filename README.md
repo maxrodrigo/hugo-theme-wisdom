@@ -6,8 +6,13 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 
 - Auto Dark Mode
 - SEO Friendly
+- Keywords
 - Multilingual Mode
 - Disqus
+- Production environment aware
+- Twitter Cards
+- Opengraph
+- Google Analytics
 
 ## Install as a git submodule
 
@@ -41,24 +46,31 @@ For more information read the official [quick start guide](https://gohugo.io/get
 
 ```toml
 baseURL = "https://www.maxrodrigo.com/"
-title = "Max Rodrigo"
-
-theme = "hugo-theme-wisdom"
+title = "My Awesome Website"
+theme = "wisdom"
 
 languageCode = "en-us"
 enableRobotsTXT = true
 
-# Default Params
+googleAnalytics = 'G-MEASUREMENT_ID'
+
 [Params]
-  author =
+  author = Max Rodrigo
   latestPostsLimit = 5
   hideReadingTime = false
   hideAuthor = false
+  keywords = ["hugo","theme","SEO"]
+```
 
+## Add Menu
+
+To add a menu, add a menu section to your site's config.toml:
+
+```toml
 [menu]
 [[menu.main]]
   identifier = 'home'
-  name = '~/'
+  name = 'home'
   url = '/'
   weight = -110
 [[menu.main]]
@@ -67,7 +79,6 @@ enableRobotsTXT = true
   url = '/posts/'
   weight = -100
 ```
-
 
 ## Contributing
 
