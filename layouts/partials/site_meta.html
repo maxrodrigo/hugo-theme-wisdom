@@ -1,0 +1,69 @@
+<title>{{ .Title }} {{ if not .IsHome }} | {{ .Site.Title }} {{ end }}</title>
+
+{{- /* Publish Date */}}
+{{ if not .PublishDate.IsZero }}
+<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTML }}" />
+{{ else if not .Date.IsZero }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}" />
+{{ end }}
+
+{{- /* Robots */}}
+{{- if and hugo.IsProduction (ne .Params.noindex false) }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+{{- /* Keywords */}}
+{{- if .IsHome }}
+    {{ with .Site.Params.keywords -}}
+    <meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" />
+    {{ end }}
+{{- else }}
+    <meta name="keywords" content="{{ if .Params.keywords -}}
+    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
+{{- end }}
+
+{{- /* Description */}}
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
+{{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
+{{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+
+{{- /* Author */}}
+{{ with .Site.Params.author }}
+<meta name="author" content="{{ . }}">
+{{ end }}
+
+{{- /* Permalink  */}}
+<link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
+
+{{- /* Favicon */}}
+<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
+<link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
+<meta name="theme-color" content="{{ .Site.Params.assets.theme_color | default "#2e2e33" }}">
+<meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
+
+{{- /* RSS */}}
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+
+{{- /* Translations */}}
+{{- range .AllTranslations -}}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+{{ end -}}
+
+{{ $style := resources.Get "scss/style.scss"  | resources.ToCSS (dict "outputStyle" "compressed") | resources.Minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{- if hugo.IsProduction }}
+{{- template "_internal/twitter_cards.html" . }}
+{{- template "_internal/opengraph.html" . }}
+{{- template "_internal/google_analytics.html" . }}
+{{- end -}}
+
+{{ hugo.Generator }}
