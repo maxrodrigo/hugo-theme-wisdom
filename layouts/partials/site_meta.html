@@ -54,10 +54,13 @@
 {{ $style := resources.Get "scss/style.scss"  | resources.ToCSS (dict "outputStyle" "compressed") | resources.Minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
+{{- template "_internal/schema.html" . }}
+
 {{- if hugo.IsProduction }}
 {{- template "_internal/twitter_cards.html" . }}
 {{- template "_internal/opengraph.html" . }}
 {{- template "_internal/google_analytics.html" . }}
+{{- template "_internal/google_analytics_async.html" . }}
 {{- end -}}
 
 {{ hugo.Generator }}
