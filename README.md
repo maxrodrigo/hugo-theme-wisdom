@@ -7,7 +7,7 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 - Auto Dark Mode
 - SEO Friendly
 - Keywords
-- Multilingual Mode
+- Multilingual and i18n support
 - Disqus
 - Production environment aware
 - Twitter Cards
@@ -54,7 +54,7 @@ enableRobotsTXT = true
 
 googleAnalytics = 'G-MEASUREMENT_ID'
 
-[Params]
+[params]
   author = Max Rodrigo
   latestPostsLimit = 5
   hideReadingTime = false
@@ -78,6 +78,17 @@ To add a menu, add a menu section to your site's config.toml:
   name = 'posts'
   url = '/posts/'
   weight = -100
+```
+
+## Front Matter
+
+Defaults
+
+```toml
+title = "{{ replace .Name "-" " " | title }}"
+date = {{ .Date }}
+draft = true
+noindex = false
 ```
 
 ## Contributing
