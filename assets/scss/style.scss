@@ -3,8 +3,9 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 :root {
-  --bg-color: white;
-  --font-color: #444;
+  --bg-color: #fefefeff;
+  --font-color: #222f;
+  --font-color-light: #222b;
   --link-color: #00e;
   --visited-color: #551a8b;
   --pre-color: #fff;
@@ -12,8 +13,9 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: black;
-    --font-color: white;
+    --bg-color: #000000ff;
+    --font-color: #ffff;
+    --font-color-light: #fffb;
     --link-color: #5bf;
     --visited-color: #ae5ee0;
     --pre-color: #fff;
@@ -98,6 +100,7 @@ li .post-meta {
 }
 
 .post-meta ul {
+  color: var(--font-color-light);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -112,5 +115,6 @@ li .post-meta {
 }
 
 footer {
+  font: 12px/1.5 monospace;
   padding-top: 24px;
 }
