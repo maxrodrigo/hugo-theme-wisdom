@@ -51,8 +51,17 @@
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
 {{ end -}}
 
+{{- /* CSS */}}
 {{ $style := resources.Get "scss/style.scss"  | resources.ToCSS (dict "outputStyle" "compressed") | resources.Minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{- /* Customizations */}}
+{{ range .Site.Params.css -}}
+<link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+{{ range .Site.Params.js -}}
+<script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}
 
 {{- template "_internal/schema.html" . }}
 
@@ -63,4 +72,4 @@
 {{- template "_internal/google_analytics_async.html" . }}
 {{- end -}}
 
-{{ hugo.Generator }}
+{{- hugo.Generator }}

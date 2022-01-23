@@ -8,11 +8,12 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 - SEO Friendly
 - Keywords
 - Multilingual and i18n support
-- Disqus
+- Comments support
 - Production environment aware
 - Twitter Cards
 - Opengraph
 - Google Analytics
+- Custom CSS and JS support
 
 ## Install as a git submodule
 
@@ -42,7 +43,7 @@ theme = "wisdom"
 
 For more information read the official [quick start guide](https://gohugo.io/getting-started/quick-start/) of Hugo.
 
-## Configuration Example
+## Site Configuration
 
 ```toml
 baseURL = "https://www.maxrodrigo.com/"
@@ -56,10 +57,13 @@ googleAnalytics = 'G-MEASUREMENT_ID'
 
 [params]
   author = Max Rodrigo
+  description = My great website
+  keywords = ["hugo","theme","SEO"]
   latestPostsLimit = 5
   hideReadingTime = false
   hideAuthor = false
-  keywords = ["hugo","theme","SEO"]
+  css = ["css/custom.css"] # /static/css/custom.css
+  js = ["js/custom.js"]
 ```
 
 ## Add Menu
@@ -80,7 +84,7 @@ To add a menu, add a menu section to your site's config.toml:
   weight = -100
 ```
 
-## Front Matter
+## Page Configuration
 
 Defaults
 
