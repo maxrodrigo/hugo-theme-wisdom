@@ -1,5 +1,7 @@
 # Wisdom
 
+[Demo](https://www.maxrodrigo.com/hugo-theme-wisdom/)
+
 A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 
 ### Features
