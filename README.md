@@ -16,6 +16,7 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 - Opengraph
 - Google Analytics
 - Custom CSS and JS support
+- Callouts
 
 ## Install as a git submodule
 

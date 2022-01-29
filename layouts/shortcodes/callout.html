@@ -1,0 +1,4 @@
+<div class="callout">
+    {{ if .Get "emoji" }} {{ .Get "emoji" }} {{ else }} :bulb: {{ end }}
+    {{ .Inner | markdownify }}
+</div>
