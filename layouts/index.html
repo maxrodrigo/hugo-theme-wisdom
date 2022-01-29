@@ -2,9 +2,11 @@
 {{ $postsLimit := .Site.Params.latestPostsLimit | default 5 }}
 <main>
     {{ with .Content }} {{ . | emojify }} {{ end }}
+
+    {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections}}
+    {{- if $posts}}
     <h2>{{ i18n "latest_posts" }}</h2>
     <ul>
-    {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections}}
     {{ range first $postsLimit $posts }}
     {{ partial "li.html" . }}
     {{ end }}
@@ -12,5 +14,6 @@
     <a href="/posts/">{{ i18n "more" }}</a>
     {{ end }}
     </ul>
+    {{- end}}
 </main>
 {{ end }}
