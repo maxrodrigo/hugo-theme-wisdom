@@ -10,6 +10,9 @@ other = "Últimos Posts"
 [more]
 other = "Más…"
 
+[updated]
+other = "Actualizado"
+
 [read_time]
 one = "1 min"
 other = "{{ .Count }} min"
