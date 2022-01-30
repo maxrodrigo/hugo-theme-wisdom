@@ -1,7 +1,9 @@
 {{ define "main" }}
 <main>
-<article>
-    {{ partial "post_meta" . }}
+<article class="entry">
+    <div class="meta">
+        {{ partial "entry_meta" . }}
+    </div>
     <h1>{{ .Title }}</h1>
     <div>
         {{ .Content | emojify }}

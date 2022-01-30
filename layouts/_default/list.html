@@ -7,7 +7,7 @@
 
     <ul>
     {{ range .Paginator.Pages }}
-    {{ partial "li.html" . }}
+    {{ partial "entry_item.html" . }}
     {{ end }}
     </ul>
     {{ partial "pagination.html" . }}

@@ -1,0 +1,21 @@
+<ul>
+    {{ with .Lastmod }}
+    <li>
+        <time datetime="{{ .Format "2006-01-02T15:04:05" }}">{{ .Format "2 Jan 2006" }}</time>
+    </li>
+    {{ end }}
+
+    {{- /* Reading Time */}}
+    {{- if and (ne .Site.Params.hideReadingTime true) (not .IsHome) }}
+        <li>{{ i18n "read_time" .ReadingTime }}</li>
+    {{- end }}
+
+    {{- /* Author */}}
+    {{- if and .Site.Params.author (ne .Site.Params.hideAuthor true) (not .IsHome) }}
+        <li>{{ .Site.Params.author }}</li>
+    {{- end }}
+
+    {{- if .Draft }}
+        <li>[draft]</li>
+    {{- end }}
+</ul>

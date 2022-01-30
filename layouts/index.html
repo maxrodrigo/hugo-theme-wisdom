@@ -8,10 +8,10 @@
     <h2>{{ i18n "latest_posts" }}</h2>
     <ul>
     {{ range first $postsLimit $posts }}
-    {{ partial "li.html" . }}
+        {{ partial "entry_item.html" . }}
     {{ end }}
     {{ if gt (len $posts) $postsLimit }}
-    <a href="/posts/">{{ i18n "more" }}</a>
+        <a href="/posts/">{{ i18n "more" }}</a>
     {{ end }}
     </ul>
     {{- end}}

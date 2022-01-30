@@ -5,7 +5,6 @@ html {
 :root {
   --bg-color: #fefefeff;
   --font-color: #222f;
-  --font-color-light: #222b;
   --link-color: #00e;
   --visited-color: #551a8b;
   --pre-color: #fff;
@@ -15,7 +14,6 @@ html {
   :root {
     --bg-color: #000000ff;
     --font-color: #ffff;
-    --font-color-light: #fffb;
     --link-color: #5bf;
     --visited-color: #ae5ee0;
     --pre-color: #fff;
@@ -95,15 +93,12 @@ header[role="main"] nav {
   }
 }
 
-li .post-meta {
-  display: inline-block;
-}
-
-.post-meta ul {
-  color: var(--font-color-light);
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.meta {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
   li {
     display: inline-block;
@@ -112,6 +107,11 @@ li .post-meta {
       content: " \00b7";
     }
   }
+}
+
+.entry-item .meta {
+  font-size: 12px;
+  display: inline-block;
 }
 
 footer {
