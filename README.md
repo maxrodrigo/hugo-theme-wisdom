@@ -1,8 +1,6 @@
 # Wisdom
 
-[Demo](https://www.maxrodrigo.com/hugo-theme-wisdom/)
-
-A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
+A fast, minimalist, monosapced theme for [Hugo](https://gohugo.io/).
 
 ### Features
 
@@ -18,35 +16,36 @@ A simple yet powerful monospaced theme for [Hugo](https://gohugo.io/).
 - Custom CSS and JS support
 - Callouts
 
-## Install as a git submodule
+## 1. Install
 
-The theme will be added as a dependency to original repository. When using CI tools like Netlify, Jenkins etc., submodule method is required.
+### 1.1 As a Git Submodule
 
-In your Hugo site directory, run:
+The theme will be added as a dependency to the original repository. When using CI tools like Netlify, Jenkins etc., the submodule method is required.
 
-```sh
-git submodule add https://github.com/maxrodrigo/hugo-theme-wisdom themes/wisdom
-```
+1. Inside your Hugo site directory, run:
 
-## Install with git clone
+    ```sh
+    git submodule add https://github.com/maxrodrigo/hugo-theme-wisdom themes/wisdom
+    ```
 
-In your Hugo site directory, run:
+2. Set the theme into the configuration file:
 
-```sh
-git clone https://github.com/maxrodrigo/hugo-theme-wisdom themes/wisdom
-```
 
-## Configure
+    ```yaml
+    # config.yaml
+    theme: "wisdom"
+    ```
 
-Open `config.toml` in the base of the Hugo site and ensure the theme option is set to `wisdom`.
-
-```toml
-theme = "wisdom"
-```
+    ```toml
+    # config.toml
+    theme = "wisdom"
+    ```
 
 For more information read the official [quick start guide](https://gohugo.io/getting-started/quick-start/) of Hugo.
 
-## Site Configuration
+## 2. Getting Started
+
+### 2.1 Example Configuration
 
 ```toml
 baseURL = "https://www.maxrodrigo.com/"
@@ -69,7 +68,7 @@ googleAnalytics = 'G-MEASUREMENT_ID'
   js = ["js/custom.js"]
 ```
 
-## Add Menu
+### 2.2 Add Menu
 
 To add a menu, add a menu section to your site's config.toml:
 
@@ -86,8 +85,17 @@ To add a menu, add a menu section to your site's config.toml:
   url = '/posts/'
   weight = -100
 ```
+### 2.3 Favicon
 
-## Page Configuration
+You can set the favicon by placing `favicon.ico` in the `static` directory.
+
+```
+- content
+- static
+  └── favicon.ico
+```
+
+### 2.4 Page Configuration
 
 Defaults
 
