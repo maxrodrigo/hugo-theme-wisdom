@@ -1,20 +1,21 @@
 # Wisdom
 
-A fast, minimalist, monosapced theme for [Hugo](https://gohugo.io/).
+A fast, minimalist, monospace theme for [Hugo](https://gohugo.io/).
 
 ### Features
 
-- Auto Dark Mode
+- Dark and Light Color Schemes
+- Color-Scheme Preference Aware
 - SEO Friendly
 - Keywords
 - Multilingual and i18n support
 - Comments support
 - Production environment aware
 - Twitter Cards
-- Opengraph
+- OpenGraph
 - Google Analytics
 - Custom CSS and JS support
-- Callouts
+- CallOuts
 
 ## 1. Install
 
@@ -62,10 +63,12 @@ googleAnalytics = 'G-MEASUREMENT_ID'
   description = My great website
   keywords = ["hugo","theme","SEO"]
   latestPostsLimit = 5
+
   hideReadingTime = false
   hideAuthor = false
+
   css = ["css/custom.css"] # /static/css/custom.css
-  js = ["js/custom.js"]
+  js = ["js/custom.js"] # /static/css/custom.js
 ```
 
 ### 2.2 Add Menu
