@@ -1,6 +1,7 @@
 # Wisdom
 
-A fast, minimalist, monospace theme for [Hugo](https://gohugo.io/).
+Wisdom is a fast, minimalist, monospace theme for [Hugo](https://gohugo.io/).\
+If you like it [give us a :star:](https://github.com/maxrodrigo/hugo-theme-wisdom)!
 
 ### Features
 
@@ -31,7 +32,6 @@ The theme will be added as a dependency to the original repository. When using C
 
 2. Set the theme into the configuration file:
 
-
     ```yaml
     # config.yaml
     theme: "wisdom"
@@ -48,28 +48,7 @@ For more information read the official [quick start guide](https://gohugo.io/get
 
 ### 2.1 Example Configuration
 
-```toml
-baseURL = "https://www.maxrodrigo.com/"
-title = "My Awesome Website"
-theme = "wisdom"
-
-languageCode = "en-us"
-enableRobotsTXT = true
-
-googleAnalytics = 'G-MEASUREMENT_ID'
-
-[params]
-  author = Max Rodrigo
-  description = My great website
-  keywords = ["hugo","theme","SEO"]
-  latestPostsLimit = 5
-
-  hideReadingTime = false
-  hideAuthor = false
-
-  css = ["css/custom.css"] # /static/css/custom.css
-  js = ["js/custom.js"] # /static/css/custom.js
-```
+See [configuration example](exampleSite/config.toml).
 
 ### 2.2 Add Menu
 
@@ -107,6 +86,15 @@ title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
 draft = true
 noindex = false
+```
+
+## Development
+
+Browse `exampleSite` and serve.
+
+```sh
+cd exampleSite
+hugo serve -t ../..
 ```
 
 ## Contributing

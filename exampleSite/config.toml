@@ -1,0 +1,30 @@
+baseURL = ""
+title = "Wisdom Theme DemoSite"
+theme = "wisdom"
+
+languageCode = "en-us"
+enableRobotsTXT = true
+enableEmoji = true
+
+googleAnalytics = ''
+
+[params]
+  author = "Wisdom"
+  description =  "Theme Hugo Wisdom"
+  keywords = ["hugo-theme", 'gohugo', "minimal", "monospaced"]
+
+  latestPostsLimit = 3 # Homepage posts list.
+  hideReadingTime = false
+  hideAuthor = false
+
+[menu]
+[[menu.main]]
+  identifier = 'home'
+  name = 'home'
+  url = '/'
+  weight = -110
+[[menu.main]]
+  identifier = 'posts'
+  name = 'posts'
+  url = '/posts/'
+  weight = -100
