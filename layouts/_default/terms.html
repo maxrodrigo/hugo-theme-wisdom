@@ -6,7 +6,7 @@
     {{ end }}
 
     <ul>
-    {{ range .Site.Taxonomies.tags }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
     <li class="taxo-item">
         <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         <div class="meta">[{{ .Count }}]</div>

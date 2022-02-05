@@ -5,6 +5,12 @@ description = "Wisdom Theme Features"
 tags = [
     "features",
     "wisdom",
+    "markdown",
+    "shortcodes"
+]
+categories = [
+    "customizations",
+    "themes"
 ]
 +++
 

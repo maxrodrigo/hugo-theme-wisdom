@@ -28,3 +28,18 @@ googleAnalytics = ''
   name = 'posts'
   url = '/posts/'
   weight = -100
+[[menu.main]]
+  identifier = 'categories'
+  name = 'categories'
+  url = '/categories/'
+  weight = -90
+[[menu.main]]
+  identifier = 'tags'
+  name = 'tags'
+  url = '/tags/'
+  weight = -80
+[[menu.main]]
+  identifier = 'rss'
+  name = 'rss'
+  url = '/index.xml'
+  weight = -70
