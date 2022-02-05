@@ -116,6 +116,12 @@ header[role="main"] nav {
   opacity: 75%;
 }
 
+.callout {
+  padding: 1em;
+  color: var(--pre-color);
+  background: var(--pre-bg-color);
+}
+
 footer {
   font: 12px/1.5 monospace;
   padding-top: 24px;

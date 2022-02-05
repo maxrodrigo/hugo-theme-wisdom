@@ -16,7 +16,7 @@ If you like it [give us a :star:](https://github.com/maxrodrigo/hugo-theme-wisdo
 - OpenGraph
 - Google Analytics
 - Custom CSS and JS support
-- CallOuts
+- Callouts
 - Taxonomies
 
 ## 1. Install
