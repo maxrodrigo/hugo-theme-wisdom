@@ -1,20 +1,19 @@
 <ul>
     {{ if .Lastmod }}
     <li>
-        <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05" }}">{{ .Lastmod.Format "2 Jan 2006" }}</time>
+        <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05" }}">{{ .Lastmod.Format "Jan 2, 2006" }}</time>
         {{- if ne .Date .Lastmod }}
         <span>[{{ i18n "updated" }}]</span>
         {{- end }}
     </li>
     {{- end }}
 
-    {{- /* Reading Time */}}
-    {{- if and (ne .Site.Params.hideReadingTime true) (not .IsHome) }}
-        <li>{{ i18n "read_time" .ReadingTime }}</li>
+    {{- if ne .Site.Params.hideReadingTime true}}
+    <li>{{ i18n "read_time" .ReadingTime }}</li>
     {{- end }}
 
     {{- /* Author */}}
-    {{- if and .Site.Params.author (ne .Site.Params.hideAuthor true) (not .IsHome) }}
+    {{- if ne .Site.Params.hideAuthor true }}
         <li>{{ .Site.Params.author }}</li>
     {{- end }}
 

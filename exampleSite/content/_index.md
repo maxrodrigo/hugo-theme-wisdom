@@ -15,3 +15,4 @@ If you like it [give us a :star:](https://github.com/maxrodrigo/hugo-theme-wisdo
 - Google Analytics
 - Custom CSS and JS support
 - CallOuts
+- Taxonomies

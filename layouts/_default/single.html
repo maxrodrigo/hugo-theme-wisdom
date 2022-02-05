@@ -1,22 +1,14 @@
 {{ define "main" }}
 <main>
 <article class="entry">
+    <h1>{{ .Title }}</h1>
     <div class="meta">
         {{ partial "entry_meta" . }}
+        {{ partial "entry_meta_extra" . }}
     </div>
-    <h1>{{ .Title }}</h1>
     <div>
         {{ .Content | emojify }}
     </div>
-    {{ with .Params.tags }}
-    <div>
-        <ul id="tags">
-        {{ range . }}
-            <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-        {{ end }}
-        </ul>
-    </div>
-    {{ end }}
     {{ with .Site.DisqusShortname }}
     <div>
         {{ template "_internal/disqus.html" . }}

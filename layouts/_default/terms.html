@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main>
+    {{ if or .Title .Content }}
+        {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+        {{ with .Content }}<div>{{ . }}</div>{{ end }}
+    {{ end }}
+
+    <ul>
+    {{ range .Site.Taxonomies.tags }}
+    <li class="taxo-item">
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        <div class="meta">[{{ .Count }}]</div>
+    </li>
+    {{ end }}
+    </ul>
+</main>
+{{ end }}
