@@ -11,7 +11,9 @@
         {{ partial "entry_item.html" . }}
     {{ end }}
     {{ if gt (len $posts) $postsLimit }}
-        <a href="/posts/">{{ i18n "more" }}</a>
+        <li class="item-more">
+            <a href="/posts/">{{ i18n "more" }}</a>
+        </li>
     {{ end }}
     </ul>
     {{- end}}

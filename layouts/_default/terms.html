@@ -7,7 +7,7 @@
 
     <ul>
     {{- range $key, $value := .Data.Terms.Alphabetical }}
-    <li class="taxo-item">
+    <li class="item">
         <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         <div class="meta">[{{ .Count }}]</div>
     </li>

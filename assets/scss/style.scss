@@ -109,11 +109,14 @@ header[role="main"] nav {
   }
 }
 
-.taxo-item .meta,
-.entry-item .meta {
+.item .meta {
   font-size: 12px;
   display: inline-block;
   opacity: 75%;
+}
+
+.item-more {
+  list-style: none;
 }
 
 .callout {
