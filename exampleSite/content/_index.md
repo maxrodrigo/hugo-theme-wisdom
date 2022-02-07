@@ -1,7 +1,7 @@
 Wisdom is a fast, minimalist, monospace theme for [Hugo](https://gohugo.io/).\
 If you like it [give us a :star:](https://github.com/maxrodrigo/hugo-theme-wisdom)!
 
-### Features
+## Features
 
 - Dark and Light Color Schemes
 - Color-Scheme Preference Aware

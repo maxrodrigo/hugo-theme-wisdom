@@ -45,4 +45,6 @@ googleAnalytics = ''
   weight = -70
 
 [taxonomies]
-  series = 'series'
+  series = 'series' # Needed for OpenGraph
+  category = 'categories'
+  tag = 'tags'
