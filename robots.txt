@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: sitemap.xml
+Sitemap: https://www.maxrodrigo.com/hugo-theme-wisdom/sitemap.xml
