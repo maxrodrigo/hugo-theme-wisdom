@@ -1,6 +1,9 @@
 # Wisdom
 
-Wisdom is a fast, minimalist, monospace theme for [Hugo](https://gohugo.io/).\
+[![GitHub Pages](https://github.com/maxrodrigo/hugo-theme-wisdom/actions/workflows/gh-pages.yaml/badge.svg)](https://github.com/maxrodrigo/hugo-theme-wisdom/actions/workflows/gh-pages.yaml)
+![GitHub License](https://img.shields.io/github/license/maxrodrigo/hugo-theme-wisdom)
+
+Wisdom is a fast, minimalist, monospace theme for [Hugo](https://gohugo.io/). See [DEMO](https://www.maxrodrigo.com/hugo-theme-wisdom)\
 If you like it [give us a :star:](https://github.com/maxrodrigo/hugo-theme-wisdom)!
 
 ### Features
