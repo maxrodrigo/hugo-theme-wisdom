@@ -43,3 +43,6 @@ googleAnalytics = ''
   name = 'rss'
   url = '/index.xml'
   weight = -70
+
+[taxonomies]
+  series = 'series'
