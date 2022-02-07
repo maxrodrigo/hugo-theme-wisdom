@@ -1,4 +1,12 @@
-<title>{{ .Title }} {{ if not .IsHome }} | {{ .Site.Title }} {{ end }}</title>
+<title>
+    {{- if .IsPage }}
+        {{ .Title }} | {{ .Site.Title }}
+    {{- else if .Title }}
+        {{ .Title }} | {{ .Site.Title }}
+    {{- else }}
+        {{ .Site.Title }}
+    {{- end }}
+</title>
 
 {{- /* Publish Date */}}
 {{ if not .PublishDate.IsZero }}
